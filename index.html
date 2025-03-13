@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Músicas | RecSound</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="assets/crab-animal-crustacean-svgrepo-com 1.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <header class="form-header">
+            <img src="assets/RecSound-LOGO.png" alt="RecSound" class="logo">
+            <h1>Cadastro de Músicas</h1>
+        </header>
+        <form id="musicForm">
+            <!-- Campo Título da Música -->
+            <label for="title" class="required">Título da Música</label>
+            <input type="text" id="title" name="title" required>
+            <div class="error" id="titleError"></div>
+
+            <!-- Campo Artista/Banda -->
+            <label for="artist" class="required">Artista/Banda</label>
+            <input type="text" id="artist" name="artist" required>
+            <div class="error" id="titleError"></div>
+
+            <!-- Campo Gênero Musical -->
+            <label for="genre">Gênero Musical</label>
+            <select id="genre" name="genre">
+                <option value="">Selecione um gênero</option>
+                <option value="pop">Pop</option>
+                <option value="rock">Rock</option>
+                <option value="hip-hop">Hip-Hop</option>
+                <option value="reggae">Reggae</option>
+                <option value="eletronica">Eletrônica</option>
+                <option value="funk">Funk</option>
+                <option value="sertanejo">Sertanejo</option>
+                <option value="classica">Clássica</option>
+            </select>
+
+            <!-- Campo Duração -->
+            <label for="duration">Duração (em segundos)</label>
+            <input type="number" id="duration" name="duration" min="1">
+
+            <!-- Campo Descrição -->
+            <label for="description">Descrição</label>
+            <textarea id="description" name="description" rows="4"></textarea>
+
+            <!-- Botão de Envio -->
+            <button type="submit">Cadastrar Música</button>
+        </form>
+    </div>
+
+    <!-- Arquivo JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+</html>
