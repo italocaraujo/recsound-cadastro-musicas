@@ -1,12 +1,9 @@
-// Função para lidar com o envio do formulário
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("musicForm");
 
-    // Adiciona um ouvinte de evento ao formulário
     form.addEventListener("submit", function (event) {
-        event.preventDefault(); // Impede o envio real do formulário
+        event.preventDefault();
 
-        // Verifica se os campos obrigatórios estão preenchidos
         const titleInput = document.getElementById("title");
         const artistInput = document.getElementById("artist");
 
@@ -15,10 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        // Exibe um popup de sucesso
-        alert("Música cadastrada com sucesso!");
+        window.alertMessage = "Música cadastrada com sucesso!";
+        alert(window.alertMessage);
 
-        // Limpa o formulário após o envio
         form.reset();
     });
 });
